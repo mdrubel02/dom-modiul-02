@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <section>
+            <h1>common most of the time</h1>
+
+
+            <h1 id="another"></h1>
+            <p id="click-title"></p>
+            <input id="name-field" type="text">
+            <button id="update-name">update</button>
+            
+            <button onclick="anotherChange()">click me</button>
+            <button onclick="handling()">click me</button>
+
+
+            <button id="file-change">click me</button>
+            
+        </section>
+    </main>
+    <script>
+         
+        function anotherChange(){
+            const change=document.getElementById('another');
+            change.innerText='another heading tag change';
+        }
+        function handling(){
+            const clickingMethod=document.getElementById('another');
+            clickingMethod.innerText='create by Md Rubel';
+            clickingMethod.backgroundColor='crimson';
+        }
+
+        document.getElementById('file-change').addEventListener('click', function () {
+            const btnClick=document.getElementById('another');
+            btnClick.innerText='tmi abr changne kmne hoila';
+            
+        });
+
+    //     document.getElementById('file-change').addEventListener('click',function(){
+    //         const anotherFileChange
+    //   })
+      
+        document.getElementById('update-name').addEventListener('click',function(){
+            const nameFild =document.getElementById('name-field');
+            
+            const makeBtn =document.getElementById('another');
+            makeBtn.innerText=nameFild.value; //kuno input er vitore text ke paite hoile (.value)dite hoi
+            nameFild.value=''; //kuno kicchu lekhar por oita thika jai,er jnno eita use kore
+
+        })
+
+
+    </script>
+</body>
+</html>

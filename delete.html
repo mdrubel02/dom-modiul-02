@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <h2>more Event</h2>
+        <section>
+            <h3 id="delete-info">amke delete koro</h3>
+            <input id="delete-text" type="text"  placeholder="type your info">
+            <button id="delete-btn" disabled>delete</button>
+        </section>
+    </main>
+    <script>
+        document.getElementById('delete-btn').addEventListener('click',function(){
+            document.getElementById('delete-info').style.display='none';
+        })
+
+        document.getElementById('delete-text').addEventListener('keyup',function(event){
+            const deleteButton=document.getElementById('delete-btn');
+            if(event.target.value=='delete'){
+                
+                deleteButton.removeAttribute('disabled');
+            }
+            else{
+                deleteButton.setAttribute('disabled',true);
+            }
+        })
+
+
+
+        //focus
+        // document.getElementById('delete-text').addEventListener('focus',function(){
+        //     document.body.style.backgroundColor='orange';
+        // })
+        // //blur
+        // document.getElementById('delete-text').addEventListener('blur',function(){
+        //     document.body.style.backgroundColor='white';
+        // })
+
+        //keydown
+        // document.getElementById('delete-text').addEventListener('keydown',function(){
+        //     const deleteInfo=document.getElementById('delete-text');
+        //     console.log(deleteInfo.value);
+        // })
+        // //keypress
+        // document.getElementById('delete-text').addEventListener('keypress',function(){
+        //     const deletePress =document.getElementById('delete-text');
+        //     console.log(deletePress.value);
+        // })
+
+
+        //keyup
+        // document.getElementById('delete-text').addEventListener('keyup',function(){
+        //     const deleteUp=document.getElementById('delete-text');
+        //     console.log(deleteUp);
+        // })
+        // //changeup jodi kuno inpute er vitore kicchu ke change kore tahole ei event dore fele
+        // document.getElementById('delete-text').addEventListener('change',function(){
+        //     const deleteCheck=document.getElementById('delete-text');
+        //     console.log(deleteCheck);
+        // })
+
+    </script>
+</body>
+</html>

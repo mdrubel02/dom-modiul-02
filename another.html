@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <section>
+           
+            <input id="input-text" type="text">
+            <button id="magic-btn" >click me </button>
+            <h2 id="text" ></h2>
+        </section>
+    </main>
+    <script>
+        document.getElementById('magic-btn').addEventListener('click',function(){
+           const inputBtn= document.getElementById('input-text');
+           console.log(inputBtn);
+           const textBtn = document.getElementById('text');
+           textBtn.innerText=inputBtn.value;
+           inputBtn.value='';
+
+        })
+    </script>
+</body>
+</html>
